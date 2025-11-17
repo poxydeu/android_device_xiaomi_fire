@@ -73,9 +73,17 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml
 
+
 # ConsumerIr
 PRODUCT_PACKAGES += \
     android.hardware.ir-service.example
+
+$(call soong_config_set,android_hardware_audio,skip_speaker_layout_channel_mask_field,true)
+
+# Bootanimation
+TARGET_SCREEN_HEIGHT := 1650
+TARGET_SCREEN_WIDTH := 720
+>>>>>>> bcbf718 (earth: Opt out of speaker_layout_channel_mask field)
 
 # Cgroup
 PRODUCT_COPY_FILES += \
