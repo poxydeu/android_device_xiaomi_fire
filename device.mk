@@ -78,7 +78,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.ir-service.example
 
-$(call soong_config_set,android_hardware_audio,skip_speaker_layout_channel_mask_field,true)
+$(call soong_config_set_bool,android_hardware_audio,skip_speaker_layout_channel_mask_field,true)
 
 # Bootanimation
 TARGET_SCREEN_HEIGHT := 1650
@@ -142,6 +142,7 @@ PRODUCT_COPY_FILES += \
 # Light
 PRODUCT_PACKAGES += \
     android.hardware.light-service.lineage
+
 
 # Media
 PRODUCT_COPY_FILES += \
