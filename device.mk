@@ -79,6 +79,10 @@ PRODUCT_PACKAGES += \
 
 $(call soong_config_set_bool,android_hardware_audio,skip_speaker_layout_channel_mask_field,true)
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth-service.mediatek
+
 # Bootanimation
 TARGET_SCREEN_HEIGHT := 1650
 TARGET_SCREEN_WIDTH := 720
